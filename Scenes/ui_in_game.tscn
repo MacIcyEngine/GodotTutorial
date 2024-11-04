@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dug87232vl1ke"]
+
+[ext_resource type="PackedScene" uid="uid://csj8m20o1xn2f" path="res://Scenes/ui_pause_menu.tscn" id="1_r83ee"]
+[ext_resource type="PackedScene" uid="uid://b6k8ndcxow212" path="res://Scenes/ui_collectible_counter.tscn" id="1_wd7jv"]
+[ext_resource type="PackedScene" uid="uid://cij7qsiuj8qxc" path="res://Scenes/ui_healthbar.tscn" id="3_dy731"]
+[ext_resource type="PackedScene" uid="uid://d8sg4kjecbsc" path="res://Scenes/ui_ability_cooldown.tscn" id="4_egvnw"]
+[ext_resource type="Texture2D" uid="uid://68cyffpb6hhr" path="res://Sprites/dash.png" id="5_3ce4u"]
+
+[node name="UIInGame" type="CanvasLayer"]
+
+[node name="UICollectibleCounter" parent="." instance=ExtResource("1_wd7jv")]
+
+[node name="UIPauseMenu" parent="." instance=ExtResource("1_r83ee")]
+visible = false
+
+[node name="UIHealtbar" parent="." instance=ExtResource("3_dy731")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_right = 0.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="UIAbilityCooldown" parent="." instance=ExtResource("4_egvnw")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_3ce4u")

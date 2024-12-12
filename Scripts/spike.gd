@@ -4,4 +4,4 @@ extends Node2D
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is PlayerController:
-		EventHandler.emit_on_player_take_damage(spike_damage)
+		EventHandler.on_player_take_damage.emit(spike_damage)

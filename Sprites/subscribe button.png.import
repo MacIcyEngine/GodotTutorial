@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj8262ftpcegk"
-path="res://.godot/imported/collectible.png-945bfdec1cd587ec6aa03b0a728b94ba.ctex"
+uid="uid://512hxwm8vqk1"
+path="res://.godot/imported/subscribe button.png-c03737797fdd93e6cf592775a4ea01b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/collectible.png"
-dest_files=["res://.godot/imported/collectible.png-945bfdec1cd587ec6aa03b0a728b94ba.ctex"]
+source_file="res://Sprites/subscribe button.png"
+dest_files=["res://.godot/imported/subscribe button.png-c03737797fdd93e6cf592775a4ea01b6.ctex"]
 
 [params]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cij7qsiuj8qxc"]
+
+[ext_resource type="Script" path="res://Scripts/ui_health_bar.gd" id="1_i5gog"]
+
+[node name="UIHealthBar" type="ProgressBar"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_bottom = 40.0
+grow_horizontal = 0
+step = 1.0
+show_percentage = false
+script = ExtResource("1_i5gog")
+start_hp = 1
+full_hp_color = Color(0, 1, 0, 1)
+empty_hp_color = Color(1, 0, 0, 1)

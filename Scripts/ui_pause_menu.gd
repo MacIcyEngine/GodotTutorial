@@ -4,15 +4,15 @@ func _ready() -> void:
 	visible = false
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("pause"):
+	if Input.is_action_just_pressed("ui_cancel"):
 		toggle()
 
 func toggle() -> void:
 	visible = !visible
 	if visible:
-		Engine.time_scale = 0.0
+		get_tree().paused = true
 	else:
-		Engine.time_scale = 1.0
+		get_tree().paused = false
 
 func _on_resume_button_pressed() -> void:
 	toggle()

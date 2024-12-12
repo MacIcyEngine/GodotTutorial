@@ -7,5 +7,4 @@ func _exit_tree() -> void:
 	EventHandler.on_player_death.disconnect(reload_scene_on_death)
 
 func reload_scene_on_death() -> void:
-	print("dead")
 	get_tree().reload_current_scene()

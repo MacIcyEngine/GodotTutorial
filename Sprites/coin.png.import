@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cus2q8q6yv2cq"
-path="res://.godot/imported/spike-07.png-3d0c05ab5b00062eb9760fe3d6429234.ctex"
+uid="uid://dj8262ftpcegk"
+path="res://.godot/imported/coin.png-b7fabe76c61e67396a7c0402e221b540.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/spike-07.png"
-dest_files=["res://.godot/imported/spike-07.png-3d0c05ab5b00062eb9760fe3d6429234.ctex"]
+source_file="res://Sprites/coin.png"
+dest_files=["res://.godot/imported/coin.png-b7fabe76c61e67396a7c0402e221b540.ctex"]
 
 [params]
 

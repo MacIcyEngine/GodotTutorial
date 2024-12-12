@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 EventHandler="*res://Scripts/event_handler.gd"
-SceneManager="*res://Scripts/scene_manager.gd"
 
 [dotnet]
 

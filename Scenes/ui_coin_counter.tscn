@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6k8ndcxow212"]
 
-[ext_resource type="Texture2D" uid="uid://dj8262ftpcegk" path="res://Sprites/collectible.png" id="1_h4wer"]
-[ext_resource type="Script" path="res://Scripts/ui_collectible_counter.gd" id="1_ilsbt"]
+[ext_resource type="Texture2D" uid="uid://dj8262ftpcegk" path="res://Sprites/coin.png" id="1_h4wer"]
+[ext_resource type="Script" path="res://Scripts/ui_coin_counter.gd" id="1_ilsbt"]
 
-[node name="UICollectibleCounter" type="HBoxContainer"]
-offset_right = 121.0
+[node name="UICoinCounter" type="HBoxContainer"]
+offset_right = 110.0
 offset_bottom = 64.0
 theme_override_constants/separation = 20
 script = ExtResource("1_ilsbt")

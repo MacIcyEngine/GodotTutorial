@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c3mafehiyuja0" path="res://Scenes/terrain.tscn" id="1_eoeko"]
 [ext_resource type="PackedScene" uid="uid://dug87232vl1ke" path="res://Scenes/ui_in_game.tscn" id="1_o1m31"]
 [ext_resource type="PackedScene" uid="uid://dlehtl00a2jww" path="res://Scenes/animated_player.tscn" id="2_k3lnb"]
-[ext_resource type="PackedScene" uid="uid://yp0b1wxmju66" path="res://Scenes/collectibe.tscn" id="3_egku5"]
+[ext_resource type="PackedScene" uid="uid://yp0b1wxmju66" path="res://Scenes/coin.tscn" id="3_egku5"]
 [ext_resource type="PackedScene" uid="uid://dltd8lmnmbb7v" path="res://Scenes/spike.tscn" id="5_mao0o"]
 
 [sub_resource type="Curve" id="Curve_r7xxg"]
@@ -13,6 +13,9 @@ point_count = 2
 [node name="MainScene" type="Node2D"]
 
 [node name="UIInGame" parent="." instance=ExtResource("1_o1m31")]
+
+[node name="UIHealtbar" parent="UIInGame" index="2"]
+start_hp = 10
 
 [node name="Terrain" parent="." instance=ExtResource("1_eoeko")]
 

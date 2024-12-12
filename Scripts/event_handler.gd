@@ -10,8 +10,4 @@ func emit_on_collected() -> void:
 signal on_player_take_damage(damage: int)
 func emit_on_player_take_damage(damage: int):
 	on_player_take_damage.emit(damage)
-
-signal on_player_death()
-func emit_on_player_death() -> void:
-	on_player_death.emit()
 #endregion

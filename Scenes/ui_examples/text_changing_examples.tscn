@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7s6p77uccpe5"]
+[gd_scene load_steps=5 format=3 uid="uid://c7s6p77uccpe5"]
 
 [ext_resource type="Script" path="res://Scripts/ui_examples/text_changing_examples.gd" id="1_6vv4e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e7bpg"]
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_q8evb"]
 font_size = 50
 
-[sub_resource type="LabelSettings" id="LabelSettings_e7bpg"]
+[sub_resource type="LabelSettings" id="LabelSettings_5v1b0"]
 font_size = 50
 
 [node name="TextChangingExamples" type="Control"]
@@ -17,15 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6vv4e")
 
-[node name="LabelExample1" type="Label" parent="."]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Some text on the screen"
-label_settings = SubResource("LabelSettings_q8evb")
-
-[node name="LabelExample2_x" type="Label" parent="."]
+[node name="MouseXText" type="Label" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(401.73, 0)
 layout_mode = 1
@@ -37,14 +32,16 @@ offset_right = 401.73
 grow_vertical = 0
 text = "Mouse x: 0"
 label_settings = SubResource("LabelSettings_e7bpg")
+vertical_alignment = 2
 
-[node name="ColorRect" type="ColorRect" parent="LabelExample2_x"]
+[node name="ColorRect" type="ColorRect" parent="MouseXText"]
 layout_mode = 0
+offset_top = 79.0
 offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.069164, -14.9424)
+offset_bottom = 119.0
+scale = Vector2(0.0844613, -18.7713)
 
-[node name="LabelExample2_y" type="Label" parent="."]
+[node name="MouseYText" type="Label" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(401.73, 0)
 layout_mode = 1
@@ -57,27 +54,39 @@ grow_vertical = 0
 text = "Mouse y: 0"
 label_settings = SubResource("LabelSettings_e7bpg")
 
-[node name="ColorRect" type="ColorRect" parent="LabelExample2_y"]
+[node name="ColorRect" type="ColorRect" parent="MouseYText"]
 layout_mode = 0
-offset_right = 40.0
+offset_left = -94.0
+offset_right = -54.0
 offset_bottom = 40.0
 scale = Vector2(35.2207, -0.090152)
 
-[node name="LabelExample3" type="Label" parent="."]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = -34.5
-offset_right = 94.0
-offset_bottom = 34.5
+offset_left = -292.5
+offset_top = -71.0
+offset_right = 292.5
+offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="SomeText" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Some text on the screen"
+label_settings = SubResource("LabelSettings_q8evb")
+
+[node name="CounterText" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 text = "0"
-label_settings = SubResource("LabelSettings_e7bpg")
+label_settings = SubResource("LabelSettings_5v1b0")
 horizontal_alignment = 1
 vertical_alignment = 1

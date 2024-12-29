@@ -1,22 +1,22 @@
 extends Node
 
-@onready var label_example_1: Label = %LabelExample1
-@onready var label_example_2_x: Label = %LabelExample2_x
-@onready var label_example_2_y: Label = %LabelExample2_y
-@onready var label_example_3: Label = %LabelExample3
+@onready var mouse_x_text: Label = %MouseXText
+@onready var mouse_y_text: Label = %MouseYText
+@onready var some_text: Label = %SomeText
+@onready var counter_text: Label = %CounterText
 
 var counter: int = 0
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		label_example_1.text = "Some different text"
+		some_text.text = "Some different text"
 
 	if Input.is_action_just_pressed("left_mouse_button"):
 		counter += 1
-		label_example_3.text = str(counter)
+		counter_text.text = str(counter)
 
 	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
-	label_example_2_x.position.x = mouse_pos.x
-	label_example_2_y.position.y = mouse_pos.y
-	label_example_2_x.text = str("Mouse x: ", mouse_pos.x)
-	label_example_2_y.text = str("Mouse y: ", mouse_pos.y)
+	mouse_x_text.position.x = mouse_pos.x
+	mouse_y_text.position.y = mouse_pos.y
+	mouse_x_text.text = str("Mouse x: ", mouse_pos.x)
+	mouse_y_text.text = str("Mouse y: ", mouse_pos.y)

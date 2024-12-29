@@ -10,6 +10,8 @@ var counter: int = 0
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		label_example_1.text = "Some different text"
+
+	if Input.is_action_just_pressed("left_mouse_button"):
 		counter += 1
 		label_example_3.text = str(counter)
 

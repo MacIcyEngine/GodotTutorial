@@ -35,7 +35,7 @@ anchor_bottom = 1.0
 offset_top = -69.0
 offset_right = 401.73
 grow_vertical = 0
-text = "Mouse n: 0000"
+text = "Mouse x: 0"
 label_settings = SubResource("LabelSettings_e7bpg")
 
 [node name="ColorRect" type="ColorRect" parent="LabelExample2_x"]
@@ -54,7 +54,7 @@ anchor_bottom = 1.0
 offset_top = -69.0
 offset_right = 401.73
 grow_vertical = 0
-text = "Mouse n: 0000"
+text = "Mouse y: 0"
 label_settings = SubResource("LabelSettings_e7bpg")
 
 [node name="ColorRect" type="ColorRect" parent="LabelExample2_y"]

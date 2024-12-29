@@ -24,7 +24,6 @@ func take_damage(damage: int) -> void:
 	value -= damage
 
 	if value <= 0:
-		await get_tree().process_frame
 		get_tree().call_deferred("reload_current_scene")
 
 	update_hp_bar()

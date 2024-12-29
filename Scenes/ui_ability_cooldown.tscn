@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d8sg4kjecbsc"]
+[gd_scene load_steps=2 format=3 uid="uid://blxg86lkiewq5"]
 
 [ext_resource type="Script" path="res://Scripts/ui_ability_cooldown.gd" id="2_pw1bg"]
 

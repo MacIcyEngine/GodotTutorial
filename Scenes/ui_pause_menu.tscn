@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://csj8m20o1xn2f"]
+[gd_scene load_steps=20 format=3 uid="uid://lcv5r5egflpm"]
 
 [ext_resource type="Script" path="res://Scripts/ui_pause_menu.gd" id="1_wpgo1"]
 [ext_resource type="Script" path="res://Scripts/subscribe.gd" id="2_r41f6"]

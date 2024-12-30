@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		counter_text.text = str(counter)
 
 	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
-	mouse_x_text.position.x = mouse_pos.x
-	mouse_y_text.position.y = mouse_pos.y
+	mouse_x_text.global_position.x = mouse_pos.x
+	mouse_y_text.global_position.y = mouse_pos.y
 	mouse_x_text.text = str("Mouse x: ", mouse_pos.x)
 	mouse_y_text.text = str("Mouse y: ", mouse_pos.y)

@@ -14,6 +14,9 @@ var stylebox: StyleBoxFlat
 
 var is_posioned: bool = false
 
+func _exit_tree() -> void:
+	is_posioned = false
+
 func _ready() -> void:
 	stylebox = health_progress_bar.get_theme_stylebox("fill").duplicate() ## Default stylebox type is StyleBoxFlat
 	health_progress_bar.add_theme_stylebox_override("fill", stylebox)

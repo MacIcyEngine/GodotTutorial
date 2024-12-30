@@ -2,7 +2,6 @@ extends ProgressBar
 
 @export var ability_cooldown: float = 1.0
 
-@onready var counter_text: Label = %CounterText
 @onready var texture_rect: TextureRect = $MarginContainer/TextureRect
 
 var cooldown_timer: float = 0.0

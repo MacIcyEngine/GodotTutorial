@@ -9,7 +9,7 @@
 font_size = 40
 
 [sub_resource type="LabelSettings" id="LabelSettings_6tpif"]
-font_size = 32
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 
 [node name="ResponsiveExample" type="Control"]
@@ -163,3 +163,9 @@ text = "Footer"
 label_settings = SubResource("LabelSettings_7gewb")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Resolution" type="Label" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0000x0000"

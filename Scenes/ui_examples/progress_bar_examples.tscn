@@ -43,37 +43,30 @@ size_flags_vertical = 1
 show_percentage = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(800, 0)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -324.0
-offset_top = -324.0
-offset_right = 324.0
-offset_bottom = 324.0
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
 alignment = 1
 
 [node name="ProgressBarExample" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 alignment = 1
 script = ExtResource("2_1ob3t")
 
 [node name="LeftButton" type="Button" parent="VBoxContainer/ProgressBarExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 30
 text = "👈"
 
 [node name="BasicProgressBar" type="ProgressBar" parent="VBoxContainer/ProgressBarExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -82,9 +75,9 @@ step = 1.0
 value = 5.0
 
 [node name="RightButton" type="Button" parent="VBoxContainer/ProgressBarExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 30
 text = "👉"
 
 [node name="ProgressBarTimerExample" type="HBoxContainer" parent="VBoxContainer"]
@@ -93,16 +86,16 @@ alignment = 1
 script = ExtResource("2_0mpbq")
 
 [node name="StartTimerButton" type="Button" parent="VBoxContainer/ProgressBarTimerExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 30
 text = "▶"
 
 [node name="TimerProgressBar" type="ProgressBar" parent="VBoxContainer/ProgressBarTimerExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 1
 max_value = 3.0
 show_percentage = false
 
@@ -123,7 +116,7 @@ alignment = 1
 
 [node name="HoverProgressBar" type="ProgressBar" parent="VBoxContainer/ProgressHoverExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 0.2
@@ -133,7 +126,7 @@ script = ExtResource("3_4ok83")
 
 [node name="HoverProgressBar2" type="ProgressBar" parent="VBoxContainer/ProgressHoverExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 0.2
@@ -144,7 +137,7 @@ script = ExtResource("3_4ok83")
 
 [node name="HoverProgressBar3" type="ProgressBar" parent="VBoxContainer/ProgressHoverExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 0.2
@@ -155,7 +148,7 @@ script = ExtResource("3_4ok83")
 
 [node name="HoverProgressBar4" type="ProgressBar" parent="VBoxContainer/ProgressHoverExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 0.2
@@ -169,7 +162,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="AbilityCooldownProgressBar" type="ProgressBar" parent="VBoxContainer/AbilityCooldownExample"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 max_value = 1.0
 step = 0.001
@@ -205,7 +198,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AbilityCooldownProgressBar2" type="ProgressBar" parent="VBoxContainer/AbilityCooldownExample"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 max_value = 1.0
 step = 0.001
@@ -242,7 +235,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AbilityCooldownProgressBar3" type="ProgressBar" parent="VBoxContainer/AbilityCooldownExample"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 max_value = 1.0
 step = 0.001
@@ -285,27 +278,27 @@ script = ExtResource("8_hjxx3")
 
 [node name="HealthProgressBar" type="ProgressBar" parent="VBoxContainer/HealthBarExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 1
 show_percentage = false
 
 [node name="HealButton" type="Button" parent="VBoxContainer/HealthBarExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 30
 text = "❤"
 
 [node name="DamageButton" type="Button" parent="VBoxContainer/HealthBarExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 30
 text = "⚔"
 
 [node name="PoisonButton" type="Button" parent="VBoxContainer/HealthBarExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 30
 text = "🐍"
 
 [connection signal="pressed" from="VBoxContainer/ProgressBarExample/LeftButton" to="VBoxContainer/ProgressBarExample" method="_on_left_button_pressed"]

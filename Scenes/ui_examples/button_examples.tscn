@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/ui_examples/button_examples/menu_button.gd" id="5_wu387"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lu8ti"]
-font_size = 55
+font_size = 25
 
 [node name="button_examples" type="Control"]
 layout_mode = 3
@@ -17,49 +17,45 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(800, 0)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -102.5
-offset_right = 150.0
-offset_bottom = 102.5
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.15
+anchor_right = 0.85
+anchor_bottom = 0.85
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
 alignment = 1
 
 [node name="PressExample" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_constants/separation = 20
 script = ExtResource("2_had76")
 metadata/_edit_use_anchors_ = true
 
 [node name="PressMe" type="Button" parent="VBoxContainer/PressExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "Press Me"
 
 [node name="PressMeText" type="Label" parent="VBoxContainer/PressExample"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 text = "Button was not pressed!"
 label_settings = SubResource("LabelSettings_lu8ti")
+vertical_alignment = 1
 
 [node name="ToggleExample" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_constants/separation = 20
 script = ExtResource("3_8nsvl")
 metadata/_edit_use_anchors_ = true
 
 [node name="ToggleMe" type="Button" parent="VBoxContainer/ToggleExample"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 toggle_mode = true
 text = "Toggle Me"
@@ -67,11 +63,13 @@ text = "Toggle Me"
 [node name="ToggleMeText" type="Label" parent="VBoxContainer/ToggleExample"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 text = "Toggle: false"
 label_settings = SubResource("LabelSettings_lu8ti")
+vertical_alignment = 1
 
 [node name="StopwatchExample" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_constants/separation = 20
 script = ExtResource("4_7uvrq")
@@ -79,7 +77,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="StopwatchToggle" type="Button" parent="VBoxContainer/StopwatchExample"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 toggle_mode = true
 text = "START"
@@ -87,12 +85,15 @@ text = "START"
 [node name="TimerText" type="Label" parent="VBoxContainer/StopwatchExample"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 text = "0.0"
 label_settings = SubResource("LabelSettings_lu8ti")
+vertical_alignment = 1
 
 [node name="MenuButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
 text = "MENU"
 script = ExtResource("5_wu387")

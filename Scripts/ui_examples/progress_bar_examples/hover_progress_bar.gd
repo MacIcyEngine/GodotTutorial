@@ -1,6 +1,7 @@
 extends ProgressBar
 
 var is_hovered: bool = false
+var filler: float = 0.0
 
 func _enter_tree() -> void:
 	mouse_entered.connect(toggle_hovered)
@@ -12,9 +13,11 @@ func _exit_tree() -> void:
 
 func _process(delta: float) -> void:
 	if is_hovered:
-		value += delta
+		filler = clampf(filler + delta, 0, max_value)
 	else:
-		value -= delta
+		filler = clampf(filler - delta, 0, max_value)
+
+	value = filler
 
 func toggle_hovered() -> void:
 	is_hovered = !is_hovered

@@ -28,14 +28,8 @@ func _ready() -> void:
 	update_hp_bar()
 
 func add_health(amount: float) -> void:
-	health += amount
+	health = clampf(health + amount, 0, max_health)
 	health_progress_bar.value = health
-
-	if health > max_health:
-		health = max_health
-
-	if health < 0:
-		health = 0
 
 	update_hp_bar()
 

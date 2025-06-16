@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://tvtvu3amje08"]
 
-[ext_resource type="Script" path="res://Scripts/ui_examples/button_examples/button_example_1.gd" id="2_had76"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/button_examples/button_example_2.gd" id="3_8nsvl"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/button_examples/button_example_3.gd" id="4_7uvrq"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/button_examples/menu_button.gd" id="5_wu387"]
+[ext_resource type="Script" uid="uid://8ertrg2nqrt1" path="res://ui_examples/scripts/button_examples/press_example.gd" id="2_had76"]
+[ext_resource type="Script" uid="uid://cn3n2gacsbf1e" path="res://ui_examples/scripts/button_examples/toggle_example.gd" id="3_8nsvl"]
+[ext_resource type="Script" uid="uid://bfs7sc7w3362a" path="res://ui_examples/scripts/button_examples/stopwatch_example.gd" id="4_7uvrq"]
+[ext_resource type="Script" uid="uid://6hriqcpnnvhi" path="res://ui_examples/scripts/button_examples/menu_button_example.gd" id="5_wu387"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lu8ti"]
 font_size = 25
@@ -42,11 +42,8 @@ text = "Press Me"
 [node name="PressMeText" type="Label" parent="VBoxContainer/PressExample"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
 text = "Button was not pressed!"
 label_settings = SubResource("LabelSettings_lu8ti")
-vertical_alignment = 1
 
 [node name="ToggleExample" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -63,9 +60,7 @@ text = "Toggle Me"
 [node name="ToggleMeText" type="Label" parent="VBoxContainer/ToggleExample"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Toggle: false"
+text = "OFF"
 label_settings = SubResource("LabelSettings_lu8ti")
 vertical_alignment = 1
 
@@ -85,20 +80,29 @@ text = "START"
 [node name="TimerText" type="Label" parent="VBoxContainer/StopwatchExample"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
 text = "0.0"
 label_settings = SubResource("LabelSettings_lu8ti")
 vertical_alignment = 1
 
-[node name="MenuButton" type="Button" parent="VBoxContainer"]
+[node name="MenuButtonExample" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
-text = "MENU"
+theme_override_constants/separation = 20
 script = ExtResource("5_wu387")
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuButton" type="Button" parent="VBoxContainer/MenuButtonExample"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+toggle_mode = true
+text = "START GAME"
+
+[node name="MenuButtonText" type="Label" parent="VBoxContainer/MenuButtonExample"]
+layout_mode = 2
+text = "A button that changes the scene"
+label_settings = SubResource("LabelSettings_lu8ti")
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/PressExample/PressMe" to="VBoxContainer/PressExample" method="_on_press_me_pressed"]
 [connection signal="toggled" from="VBoxContainer/ToggleExample/ToggleMe" to="VBoxContainer/ToggleExample" method="_on_toggle_me_toggled"]
 [connection signal="toggled" from="VBoxContainer/StopwatchExample/StopwatchToggle" to="VBoxContainer/StopwatchExample" method="_on_stopwatch_toggle_toggled"]
-[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuButtonExample/MenuButton" to="VBoxContainer/MenuButtonExample" method="_on_menu_button_pressed"]

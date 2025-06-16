@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dpfah5vxd8mio"]
 
-[ext_resource type="Script" path="res://Scripts/ui_examples/non_responsive_example.gd" id="1_qrqs5"]
-[ext_resource type="Texture2D" uid="uid://b24l3gql6ilsp" path="res://Sprites/KinderdijkWindmills.jpg" id="2_dpd8j"]
-[ext_resource type="Texture2D" uid="uid://dgc5x2s8td7j4" path="res://Sprites/cheese_wheel.png" id="3_kaok1"]
-[ext_resource type="Texture2D" uid="uid://rfu346hhj8wq" path="res://Sprites/cat_with_cheese.png" id="3_yyw10"]
+[ext_resource type="Script" uid="uid://c4qnwov3rel7e" path="res://ui_examples/scripts/non_responsive_example.gd" id="1_qrqs5"]
+[ext_resource type="Texture2D" path="res://sprites/KinderdijkWindmills.jpg" id="2_dpd8j"]
+[ext_resource type="Texture2D" path="res://sprites/cheese_wheel.png" id="3_kaok1"]
+[ext_resource type="Texture2D" path="res://sprites/cat_with_cheese.png" id="3_yyw10"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7gewb"]
 font_size = 40

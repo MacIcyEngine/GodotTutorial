@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://dupq58quciwj8"]
+[gd_scene load_steps=11 format=3 uid="uid://dupq58quciwj8"]
 
-[ext_resource type="Script" path="res://Scripts/ui_examples/progress_bar_examples/progress_bar_timer_example.gd" id="2_0mpbq"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/progress_bar_examples/progress_bar_example.gd" id="2_1ob3t"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/progress_bar_examples/hover_progress_bar.gd" id="3_4ok83"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/progress_bar_examples/ability_cooldown.gd" id="4_0xl7b"]
-[ext_resource type="Texture2D" uid="uid://dshd4rqioxbyl" path="res://Sprites/double_jump.png" id="5_h3w38"]
-[ext_resource type="Texture2D" uid="uid://68cyffpb6hhr" path="res://Sprites/dash.png" id="6_k8yg4"]
-[ext_resource type="Texture2D" uid="uid://cus2q8q6yv2cq" path="res://Sprites/spike.png" id="7_2eu5i"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/progress_bar_examples/health_bar_example.gd" id="8_hjxx3"]
-[ext_resource type="Script" path="res://Scripts/ui_examples/progress_bar_examples/level_progression.gd" id="9_87pak"]
+[ext_resource type="Script" uid="uid://qumqwidd5ssk" path="res://ui_examples/scripts/progress_bar_examples/progress_bar_timer_example.gd" id="2_0mpbq"]
+[ext_resource type="Script" uid="uid://cv6hhrqepervo" path="res://ui_examples/scripts/progress_bar_examples/progress_bar_example.gd" id="2_1ob3t"]
+[ext_resource type="Script" uid="uid://iio0u0fae5qr" path="res://ui_examples/scripts/progress_bar_examples/hover_progress_bar.gd" id="3_4ok83"]
+[ext_resource type="Script" uid="uid://cpegd6qi72ghn" path="res://ui_examples/scripts/progress_bar_examples/ability_cooldown.gd" id="4_0xl7b"]
+[ext_resource type="Texture2D" uid="uid://dshd4rqioxbyl" path="res://character_controller/images/double_jump.png" id="5_h3w38"]
+[ext_resource type="Texture2D" uid="uid://68cyffpb6hhr" path="res://character_controller/images/dash.png" id="6_k8yg4"]
+[ext_resource type="Texture2D" uid="uid://cus2q8q6yv2cq" path="res://terrain/images/spike.png" id="7_2eu5i"]
+[ext_resource type="Script" uid="uid://ikyht65q6dwe" path="res://ui_examples/scripts/progress_bar_examples/health_bar_example.gd" id="8_hjxx3"]
+[ext_resource type="Script" uid="uid://b2gcmwrqlvf35" path="res://ui_examples/scripts/progress_bar_examples/level_progression.gd" id="9_87pak"]
+[ext_resource type="Script" uid="uid://cwvc3e8m7dot8" path="res://ui_examples/scripts/progress_bar_examples/sinus_bar_example.gd" id="10_b3b5y"]
 
 [node name="ProgressBarExamples" type="Control"]
 layout_mode = 3
@@ -54,27 +55,25 @@ grow_vertical = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="ProgressBarExample" type="HBoxContainer" parent="VBoxContainer"]
+[node name="BasicProgressBarExample" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 alignment = 1
 script = ExtResource("2_1ob3t")
 
-[node name="LeftButton" type="Button" parent="VBoxContainer/ProgressBarExample"]
+[node name="LeftButton" type="Button" parent="VBoxContainer/BasicProgressBarExample"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "👈"
 
-[node name="BasicProgressBar" type="ProgressBar" parent="VBoxContainer/ProgressBarExample"]
+[node name="BasicProgressBar" type="ProgressBar" parent="VBoxContainer/BasicProgressBarExample"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 max_value = 10.0
-step = 1.0
-value = 5.0
 
-[node name="RightButton" type="Button" parent="VBoxContainer/ProgressBarExample"]
+[node name="RightButton" type="Button" parent="VBoxContainer/BasicProgressBarExample"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -107,6 +106,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -119,8 +119,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
+min_value = 0.001
 max_value = 0.2
 step = 0.001
+value = 0.001
+exp_edit = true
 show_percentage = false
 script = ExtResource("3_4ok83")
 
@@ -129,8 +132,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
+min_value = 0.001
 max_value = 0.2
 step = 0.001
+value = 0.001
+exp_edit = true
 fill_mode = 1
 show_percentage = false
 script = ExtResource("3_4ok83")
@@ -140,8 +146,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
+min_value = 0.001
 max_value = 0.2
 step = 0.001
+value = 0.001
+exp_edit = true
 fill_mode = 2
 show_percentage = false
 script = ExtResource("3_4ok83")
@@ -151,8 +160,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
+min_value = 0.001
 max_value = 0.2
 step = 0.001
+value = 0.001
+exp_edit = true
 fill_mode = 3
 show_percentage = false
 script = ExtResource("3_4ok83")
@@ -301,8 +313,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "🐍"
 
-[connection signal="pressed" from="VBoxContainer/ProgressBarExample/LeftButton" to="VBoxContainer/ProgressBarExample" method="_on_left_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ProgressBarExample/RightButton" to="VBoxContainer/ProgressBarExample" method="_on_right_button_pressed"]
+[node name="SinusBarExample" type="ProgressBar" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+value = 0.01
+show_percentage = false
+script = ExtResource("10_b3b5y")
+
+[connection signal="pressed" from="VBoxContainer/BasicProgressBarExample/LeftButton" to="VBoxContainer/BasicProgressBarExample" method="_on_left_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BasicProgressBarExample/RightButton" to="VBoxContainer/BasicProgressBarExample" method="_on_right_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ProgressBarTimerExample/StartTimerButton" to="VBoxContainer/ProgressBarTimerExample" method="_on_start_timer_button_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/ProgressHoverExample/HoverProgressBar" to="VBoxContainer/ProgressHoverExample" method="_on_hover_progress_bar_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/ProgressHoverExample/HoverProgressBar" to="VBoxContainer/ProgressHoverExample" method="_on_hover_progress_bar_mouse_exited"]

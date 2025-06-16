@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://3je2ulibqjke"]
+
+[ext_resource type="PackedScene" uid="uid://c3mafehiyuja0" path="res://terrain/scenes/terrain.tscn" id="1_eoeko"]
+[ext_resource type="PackedScene" uid="uid://dug87232vl1ke" path="res://ui_examples/scenes/ui_in_game.tscn" id="1_o1m31"]
+[ext_resource type="PackedScene" uid="uid://dlehtl00a2jww" path="res://character_controller/Scenes/animated_player.tscn" id="2_k3lnb"]
+[ext_resource type="PackedScene" uid="uid://c08bfobuebvng" path="res://terrain/scenes/coin.tscn" id="3_egku5"]
+[ext_resource type="PackedScene" uid="uid://mrmf6eipm00p" path="res://terrain/scenes/spike.tscn" id="5_mao0o"]
+
+[sub_resource type="Curve" id="Curve_r7xxg"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.26506), -1.23795, 0.0, 0, 0]
+point_count = 2
+
+[node name="MainScene" type="Node2D"]
+
+[node name="UIInGame" parent="." instance=ExtResource("1_o1m31")]
+visible = false
+
+[node name="UIHealtbar" parent="UIInGame" index="2"]
+start_hp = 10
+
+[node name="Terrain" parent="." instance=ExtResource("1_eoeko")]
+
+[node name="AnimatedPlayer" parent="." node_paths=PackedStringArray("ui_dash_cooldown") instance=ExtResource("2_k3lnb")]
+position = Vector2(476, -284)
+walk_speed = 150.0
+run_speed = 250.0
+deceleration = 0.1
+jump_force = -400.0
+decelerate_on_jump_release = 0.5
+dash_speed = 1000.0
+dash_curve = SubResource("Curve_r7xxg")
+dash_cooldown = 1.0
+ui_dash_cooldown = NodePath("../UIInGame/UIAbilityCooldown")
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedPlayer"]
+zoom = Vector2(2, 2)
+process_callback = 0
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Collectibe" parent="." instance=ExtResource("3_egku5")]
+visible = false
+position = Vector2(-116, -37)
+
+[node name="Collectibe2" parent="." instance=ExtResource("3_egku5")]
+visible = false
+position = Vector2(-180, -40)
+
+[node name="Collectibe3" parent="." instance=ExtResource("3_egku5")]
+visible = false
+position = Vector2(-243, -46)
+
+[node name="Collectibe4" parent="." instance=ExtResource("3_egku5")]
+visible = false
+position = Vector2(657, -87)
+
+[node name="Spike" parent="." instance=ExtResource("5_mao0o")]
+visible = false
+position = Vector2(656, -205)
+
+[editable path="UIInGame"]

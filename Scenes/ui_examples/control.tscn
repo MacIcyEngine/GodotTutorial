@@ -8,13 +8,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Container" type="FlowContainer" parent="."]
+[node name="Container" type="SplitContainer" parent="."]
 layout_mode = 1
 offset_left = 154.0
 offset_top = 104.0
-offset_right = 428.0
-offset_bottom = 1104.0
+offset_right = 576.0
+offset_bottom = 450.0
 
 [node name="ColorRect" type="ColorRect" parent="Container"]
-custom_minimum_size = Vector2(100, 1000)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3

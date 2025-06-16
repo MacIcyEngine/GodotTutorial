@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b82thuewg3e68"]
 
-[ext_resource type="PackedScene" uid="uid://c7s6p77uccpe5" path="res://Scenes/ui_examples/text_changing_examples.tscn" id="1_j84a8"]
-[ext_resource type="PackedScene" uid="uid://tvtvu3amje08" path="res://Scenes/ui_examples/button_examples.tscn" id="2_ylu6a"]
-[ext_resource type="PackedScene" uid="uid://dupq58quciwj8" path="res://Scenes/ui_examples/progress_bar_examples.tscn" id="3_ilwiw"]
+[ext_resource type="PackedScene" uid="uid://c7s6p77uccpe5" path="res://scenes/ui_examples/text_changing_examples.tscn" id="1_j84a8"]
+[ext_resource type="PackedScene" uid="uid://tvtvu3amje08" path="res://scenes/ui_examples/button_examples.tscn" id="2_ylu6a"]
+[ext_resource type="PackedScene" uid="uid://dupq58quciwj8" path="res://scenes/ui_examples/progress_bar_examples.tscn" id="3_ilwiw"]
 
 [node name="ExampleSheet" type="TabContainer"]
 anchors_preset = 15
